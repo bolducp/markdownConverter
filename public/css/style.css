@@ -1,0 +1,22 @@
+body{
+  background-color: rgba(133, 200, 197, 0.41);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1{
+  font-size: 45px;
+  text-align: center;
+}
+
+#header{
+  margin-top: -20px;
+}
+
+#footer{
+  margin-bottom: 200px;
+}
+
+.input-group{
+  padding-bottom: 10px;
+}

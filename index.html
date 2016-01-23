@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <title>Markdown Converter</title>
+</head>
+<body>
+  <div class="container">
+    <div id="header" class="page-header">
+      <h1>Welcome to Paige's Markdown Converter!</h1>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon">Enter markdown to convert here: </span>
+            <textarea id="markdownContent" name="postContent" rows="5" cols="80" class="form-control" placeholder="Write your markdown here."></textarea>
+          </div>
+         <button id="convert" type="submit" class="btn btn-info">Convert!</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div id="htmlOutput"></div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="col-xs-12" id="footer"></div>
+   </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
