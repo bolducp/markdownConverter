@@ -1,21 +1,15 @@
-'use strict';
+"use strict";
 
 $(document).ready(init);
 
 function init(){
   var currentDate = moment().format('YYYY-MM-DD');
-  parseMarkdown();
-  clickHandler();
-}
-
-
-function clickHandler(){
   $("#convert").click(parseMarkdown);
-}
-
-function populateHTML(){
-  $.get('./', function(data){
-    console.log("data", data);
+  $('textarea').keyup(function(){
+    if (this.timeoutId){
+      window.clearTimeout(this.timeoutId);
+    }
+    this.timeoutId = window.setTimeout(parseMarkdown, 300);
   })
 }
 
@@ -24,22 +18,7 @@ function parseMarkdown(){
 
   $.post('./parse', {"markdown": markdown}, function(data){
     var $html = $.parseHTML(data);
-    $('#htmlOutput').empty();
-    $('#htmlOutput').append($html);
+    $('#htmlOutput').html($html);
+    $('#htmlOutput').addClass("animated fadeInUp");
   });
-    //$taskRow.addClass("animated flash");
 }
-
-//
-// function createDomElements(data){
-//   return data.map(function(task){
-//     var $taskRow = $("#template").clone();
-//     $taskRow.removeAttr("id");
-//     $taskRow.children(".taskName").text(task.name);
-//     $taskRow.children(".dueDate").text(task.date);
-//     if (task.complete === "true"){
-//       $taskRow.find(".done").prop('checked', true);
-//     }
-//     return $taskRow;
-//   });
-// }
