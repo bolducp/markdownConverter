@@ -1,0 +1,25 @@
+{
+  "name": "markdown_converter",
+  "version": "1.0.0",
+  "description": "a web app for converting markdown into html and displaying the output",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolducp/markdownConverter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bolducp/markdownConverter/issues"
+  },
+  "homepage": "https://github.com/bolducp/markdownConverter#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "marked": "^0.3.5",
+    "morgan": "^1.6.1"
+  }
+}

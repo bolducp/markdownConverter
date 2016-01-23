@@ -2,6 +2,7 @@ body{
   background-color: rgba(133, 200, 197, 0.41);
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 
 h1{
@@ -9,12 +10,23 @@ h1{
   text-align: center;
 }
 
+#convert{
+  margin-left: 45%;
+}
+
 #header{
-  margin-top: -20px;
+  margin-top: 5%;
 }
 
 #footer{
   margin-bottom: 200px;
+}
+
+#htmlOutput{
+  min-height: 410px;
+  background-color: snow;
+  border: 1px solid #CCC;
+  padding: 2%;
 }
 
 .input-group{
